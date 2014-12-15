@@ -11,12 +11,8 @@ List<GeoNode> nodes = OSMReader.openPBFFile("C:\\Projects\\offlinereversegeocode
 
 KDTree<GeoNode> kdTree = new KDTree<GeoNode>(nodes); 
 
-System.out.println(kdTree.findNearest( new GeoNode( -33.79, 151.202 ) ));
+System.out.println(kdTree.findNearest( new GeoNode( -33.79, 151.202 ) )); // North Willoughby
 
-System.out.println(kdTree.findNearest( new GeoNode( -34.56, 152.345 ) ));
-
-Prints 
-North Willoughby
-Little Bay
+System.out.println(kdTree.findNearest( new GeoNode( -34.56, 152.345 ) )); // Little Bay
 
 Uses osm pdf datasets. Currently only does suburbs but will do streets soon.
